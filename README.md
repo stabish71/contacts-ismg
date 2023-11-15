@@ -8,8 +8,7 @@ The Contacts project is a simple Single Page Application (SPA) for managing cont
 - [Configuration](#configuration)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
+- [Contributing](#questions)
 
 ## Installation
 
@@ -44,6 +43,11 @@ The Contacts project is a simple Single Page Application (SPA) for managing cont
 
     ```bash
     php artisan migrate
+    ```
+6. Update contacts table with 1 million records:
+
+    ```bash
+    php artisan app:sync-contacts
     ```
 
 ### Frontend (HTML, CSS And jQuery)
