@@ -8,7 +8,7 @@ The Contacts project is a simple Single Page Application (SPA) for managing cont
 - [Configuration](#configuration)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
-- [Contributing](#questions)
+- [Questions](#questions)
 
 ## Installation
 

@@ -56,6 +56,10 @@ class SyncContacts extends Command
 
             $chunks = array_chunk($users, 10000);
 
+            $progressbar = $this->output->createProgressBar(count($chunks));
+
+            $progressbar->start();
+
             foreach ($chunks as $chunk) {
                 
                 //DB::beginTransaction();
@@ -63,7 +67,11 @@ class SyncContacts extends Command
                 DB::table('contacts')->insert($chunk);
 
                 //DB::commit();
+
+                $progressbar->advance();
             }
+
+            $progressbar->finish();
 
             return '1 million contacts added';
         } else {
